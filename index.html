@@ -5,15 +5,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Keith's Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+    <script src="calculator.js" defer></script>
+    <link rel="icon" type="image/png" href="https://www.favicon.cc/logo3d/883928.png">
 </head>
 
 <body>
-    <form action onsubmit="">
-        <label for="Number">Number</label><br>
+    <div class="container">
+        <h1>Calculate Me</h1>
 
+        <form action="/action_page.php" onsubmit="add()">
+            <div class="form-group">
+                <label class="num1">Number:</label>
+                <input type="number" id="num1">
+            </div>
 
-    </form>
+            <div class="calculations">
+                <form action="/action_page.php">
+                    <input type="checkbox" id="add" name="add" value="+" checked>
+                    <label for="add">+</label><br>
+                </form>
+            </div>
+
+            <div class="form-group">
+                <label class="num2">Number:</label>
+                <input type="number" id="num2">
+            </div>
+            <br>
+            <button onclick="add()">Calculate</button>
+
+        </form>
+    </div>
 </body>
-
-</html>
