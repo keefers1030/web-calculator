@@ -1,11 +1,26 @@
-console.log('Welcome to My Calculator');
+function calculate() {
+
+    let x = document.getElementById("num1").value;
+    let y = document.getElementById("num2").value;
+
+    var checkboxAdd = document.getElementById('add').checked;
+    var checkboxSubtract = document.getElementById('subtract').checked;
+    var checkboxMultiply = document.getElementById('multiply').checked;
+    var checkboxDivide = document.getElementById('divide').checked;
 
 
-function add() {
-    var x = document.getElementById("num1").value;
-    var y = document.getElementById("num2").value;
-    let res = +x + +y; //the + in front of the x and y mean they are numbers and allowed them to be added
-    alert(res);
+    if (checkboxAdd == true) {
+        var res = +x + +y;
+    } else if (checkboxSubtract == true) {
+        var res = +x - +y;
+    }
+    else if (checkboxMultiply == true) {
+        var res = +x * +y;
+    }
+    else if (checkboxDivide == true) {
+        var res = +x / +y;
+
+    }
+    document.getElementById("result").innerHTML = res;
 }
-
 
