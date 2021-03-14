@@ -5,15 +5,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Keith's Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+    <script src="calculator.js" defer></script>
+    <link rel="icon" type="image/png" href="https://www.favicon.cc/logo3d/883928.png">
 </head>
 
 <body>
-    <form action onsubmit="">
-        <label for="Number">Number</label><br>
+    <div class="container">
+        <h1><u>Calculator</u></h1>
 
+        <form>
+            <div class="form-group">
+                <label class="num1">Number:</label>
+                <input type="number" id="num1">
+            </div>
 
-    </form>
+            <div class="calculations">
+                <form>
+                    <input type="checkbox" id="add" name="add" value="+">
+                    <label for="add">+</label><br>
+
+                    <input type="checkbox" id="subtract" name="subtract" value="-">
+                    <label for="subtract">-</label><br>
+
+                    <input type="checkbox" id="multiply" name="multiply" value="*">
+                    <label for="multiply">*</label><br>
+
+                    <input type="checkbox" id="divide" name="divide" value="÷">
+                    <label for="divide">÷</label><br>
+                </form>
+            </div>
+
+            <div class="form-group">
+                <label class="num2">Number:</label>
+                <input type="number" id="num2">
+            </div>
+            <br>
+            <div class="res">
+                <button onclick="calculate()">Calculate</button>
+                <br>
+                <h2>Result:</h2>
+                <h2 id="result"></h2>
+            </div>
+        </form>
+    </div>
 </body>
-
-</html>
